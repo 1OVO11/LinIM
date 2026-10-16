@@ -13,7 +13,7 @@ int main() {
     std::cout << "数据库连接失败\n";
     return -1;
   }
-  std::cout << "✅ MySQL连接成功，启动IM服务\n";
+  std::cout << " MySQL连接成功，启动IM服务\n";
 
   // 端口说明：本机 WSL 为 mirrored 网络模式，8888 被 Windows 侧 svchost 占用，
   // 若 bind 失败且无错误检查会静默绑定临时端口；故改用 8088。
