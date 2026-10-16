@@ -110,7 +110,6 @@ void ChatServer::acceptConn() {
 void ChatServer::handleRead(int fd) {
   auto &conn_buf = m_conn_buf[fd];
   while (true) {
-    // 缓冲已满仍无可拆完整包（协议包 174 字节远小于 4096，正常不会发生），
     // 暂停读取等待下一次事件，避免死循环
     if (conn_buf.len == (int)sizeof(conn_buf.buf)) {
       break;
