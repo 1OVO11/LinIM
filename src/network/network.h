@@ -14,7 +14,7 @@
 using PacketHandler = std::function<void(int fd, const Packet &pkt)>;
 using CloseHandler = std::function<void(int fd)>;
 
-// 全局在线会话管理器（main.cpp 定义）。
+// 全局在线会话管理器
 // 网络层与业务层必须共享同一个实例，否则"登录登记"和"断开清理"会操作
 // 两份不同的在线表，导致断开后用户无法被清理（幽灵在线）。
 extern ClientManager g_client_mgr;
