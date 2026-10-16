@@ -6,7 +6,7 @@
 // 将开始的m_next_uid初始化为1，避免使用0作为有效的uid
 ClientManager::ClientManager() : m_next_uid(1) {}
 
-// 析构函数不需要做任何事情，因为所有的资源都是自动管理的
+
 ClientManager::~ClientManager() {}
 
 int ClientManager::registerClient(int fd, const std::string &account) {
